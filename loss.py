@@ -22,9 +22,3 @@ def gram_loss(input: torch.Tensor, gramm_target: torch.Tensor, weight: float = 1
   
     loss = weight * mse_loss(gramm(input), gramm_target)
     return loss
-
-# Computes MSE Loss for 2 tensors, with weight
-def content_loss(input: torch.Tensor, target: torch.Tensor, weight: float = 1.0):
-    
-    loss = weight * mse_loss(input, target)
-    return loss
